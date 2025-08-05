@@ -1,5 +1,7 @@
 # 🎨 Tasting Palettes
 
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 Tasting Palettes is a creative color palette web app where users can **design, preview, and manage custom color themes** for UI elements like Navbar, Body, and Content sections.
 
 Built with **React + Vite**, this is my first fully self-made project where I explored localStorage, dark mode, custom themes, and interactive UI/UX using TailwindCSS and Framer Motion.
