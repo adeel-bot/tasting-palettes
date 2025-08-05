@@ -1,5 +1,5 @@
 import React from 'react';
-import './theme_btn2.css';
+import './theme_btn.css';
 
 const Switch = ({ isDarkTheme, onClick }) => {
   return (

@@ -1,5 +1,5 @@
-import { useEffect, useLayoutEffect, useState, useContext } from "react";
-import Theme_btn2 from "../components/Theme_btn2";
+import { useEffect, useLayoutEffect, useState } from "react";
+import Theme_btn from "../components/Theme_btn";
 import "../index.css";
 import { v4 as uuidv4 } from "uuid";
 import PaletteCard from "../components/PaletteCard";
@@ -170,7 +170,7 @@ function Home() {
           </div>
         </div>
       )}
-      <Theme_btn2 onClick={handleTheme} isDarkTheme={isDarkTheme} />
+      <Theme_btn onClick={handleTheme} isDarkTheme={isDarkTheme} />
       <div className="footer-icons fixed bottom-2 right-1.5 z-80 flex 
       justify-center items-center gap-3 flex-col">
 
