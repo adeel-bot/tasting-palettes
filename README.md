@@ -65,7 +65,7 @@ To run this project locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/tasting-palettes.git
+git clone https://github.com/adeel-bot/tasting-palettes.git
 cd tasting-palettes
 
 # Install dependencies
