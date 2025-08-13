@@ -5,12 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 import PaletteCard from "../components/PaletteCard";
 import { motion, AnimatePresence } from "framer-motion";
 import RandomPalette from "../components/RandomPalette";
+import {animateScroll as scroll } from 'react-scroll';
 
 function Home() {
   const [colors, setColors] = useState({
-    color1: "",
-    color2: "",
-    color3: "",
+    color1: "#D9A490",
+    color2: "#EBD4B9",
+    color3: "#EEEEEE",
   });
   const [palette, setPalette] = useState([]);
   const [error, setError] = useState("");
@@ -175,8 +176,8 @@ function Home() {
       justify-center items-center gap-3 flex-col">
 
       <div className="to-top pb-1">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img width="38px" height="38px" src="./top-50.png" alt="back_to_top" />
+        <button onClick={() => scroll.scrollToTop({ duration: 700, smooth: 'easeOutCubic' })}>
+          <img width="45px" height="45px" src="./back-to-top.png" alt="back_to_top" />
           </button>
       </div>
            <div >
@@ -275,7 +276,7 @@ function Home() {
 
                                 {/* Default Card + Palette Cards */}
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-[80px]">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[80px]">
                                  {/* Default Sample Card */}
         <div
           className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-300 transition-transform hover:scale-[1.02] text-center"

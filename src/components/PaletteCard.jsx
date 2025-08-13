@@ -78,9 +78,10 @@ const PaletteCard = ({
             state={{ id: id, palette: palettes, isDarkTheme: isDarkTheme }}
           >
             <img
-              className="cursor-pointer transition-transform hover:scale-[1.25]"
-              width="25px"
-              src="./link5.png"
+              className="cursor-pointer transition-transform hover:scale-[1.20]"
+              width="29px"
+              height="29px"
+              src="./external-link.png"
               alt="Experience_link"
             />
           </Link>

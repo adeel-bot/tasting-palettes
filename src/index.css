@@ -115,25 +115,40 @@ body {
 
 @media (max-width: 720px) {
   .head-top {
-    padding-top: 9%;
+    padding-top: 6%;
   }
 }
 
 @media (max-width: 680px) {
   .head-top {
-    padding-top: 12%;
+    padding-top: 7%;
   }
 }
 
 @media (max-width: 630px) {
   .head-top {
-    padding-top: 14%;
+    padding-top: 8%;
+  }
+}
+@media (max-width: 550px) {
+  .head-top {
+    padding-top: 11%;
   }
 }
 
 @media (max-width: 470px) {
   .head-top {
-    padding-top: 24%;
+    padding-top: 20%;
+  }
+}
+@media (max-width:385px) {
+  .head-top {
+    padding-top: 17%;
+  }
+}
+@media (max-width:350px) {
+  .head-top {
+    padding-top: 23%;
   }
 }
 
