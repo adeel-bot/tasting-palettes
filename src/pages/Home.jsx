@@ -137,7 +137,20 @@ function Home() {
     deleteManager("deleteAll");
   };
 
- 
+const handleScrollToTop = () => {
+  const isSmallScreen = window.innerWidth < 768; 
+
+  if (isSmallScreen) {
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    
+    scroll.scrollToTop({
+      duration: 700,
+      smooth: 'easeOutCubic',
+    });
+  }
+};
   return (
     <div
       className={`myhome min-h-screen p-6 ${isDarkTheme ? "dark-theme" : ""}  `}
@@ -176,7 +189,7 @@ function Home() {
       justify-center items-center gap-3 flex-col">
 
       <div className="to-top pb-1">
-        <button onClick={() => scroll.scrollToTop({ duration: 700, smooth: 'easeOutCubic' })}>
+        <button onClick={handleScrollToTop}>
           <img width="45px" height="45px" src="./back-to-top.png" alt="back_to_top" />
           </button>
       </div>
