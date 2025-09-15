@@ -199,17 +199,12 @@ const handleScrollToTop = () => {
       </AnimatePresence>
       <Theme_btn onClick={handleTheme} isDarkTheme={isDarkTheme} />
       
-      <div className="footer-icons fixed bottom-2 right-1.5 z-80 flex 
-      justify-center items-center gap-3 flex-col">
+      <div className="footer-icons fixed bottom-4 right-1.5 z-80 flex 
+      justify-center items-center gap-2 flex-col">
       <div className="to-top pb-1">
-        <button onClick={handleScrollToTop}>
+        <button className="cursor-pointer hover:-translate-y-1 transition-all duration-300 " onClick={handleScrollToTop}>
           <img width="45px" height="45px" src="./back-to-top.png" alt="back_to_top" />
-          </button>
-      </div>
-      <div >
-        <a  href="https://www.instagram.com/adeel_bot/" target="_blank" rel="noopener noreferrer">
-        <img width='25px' height='25px' src="./instagram-2016-5.svg" alt="Insta_Link" />
-        </a>
+        </button>
       </div>
       <div>
         <a  href="https://www.linkedin.com/in/adeel-bot" target="_blank" rel="noopener noreferrer">
