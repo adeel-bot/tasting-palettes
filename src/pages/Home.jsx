@@ -308,7 +308,7 @@ const handleScrollToTop = () => {
       gap-6 mt-[65px]">
                                  {/* Default Sample Card */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-300 transition-transform hover:scale-[1.02] text-center"
+          className="relative rounded-2xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] text-center"
           style={{ backgroundColor: defaultCard.color_2 }}
         >
           <div
@@ -356,7 +356,7 @@ const handleScrollToTop = () => {
           {palette.map((item) => (
             <motion.div
               key={item.id}
-              className="rounded-2xl overflow-hidden shadow-lg border border-gray-300 transition-transform hover:scale-[1.02]"
+              className="rounded-2xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
               style={{ backgroundColor: item.text.color2 }}
               layout
               initial={{ opacity: 0, scale: 0.9 }}
