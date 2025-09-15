@@ -43,6 +43,7 @@ body {
 
 .myhome input::placeholder {
   color: #9ca3af;
+  font-size: 13px;
 }
 
 .myhome.dark-theme input::placeholder {

@@ -217,18 +217,20 @@ const handleScrollToTop = () => {
         </a>
       </div>
       </div>
-      <div className="max-w-4xl mx-auto bg-[#FAF0E6] shadow-md rounded-xl p-6 mb-10">
-        <h1 className="head-top text-4xl font-bold text-center gap-3 mb-6 text-gray-800 flex justify-center items-center dancing-script">
+
+
+      <div className="max-w-[40rem] mx-auto bg-[#FAF0E6] shadow-md rounded-xl pt-4 pb-1.5 px-6 ">
+        <h1 className="head-top text-[22px] font-bold text-center gap-3 mb-3.5 text-gray-800 flex justify-center items-center dancing-script">
           <span>🎨</span>
           <span>Taste Your Color Palette </span>
         </h1>
 
                                     {/* Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 gap-y-2  ">
                                        {/* Navbar Color */}
 
           <div className="flex flex-col">
-            <label className="mb-1 text-gray-700 font-semibold text-center label">
+            <label className="mb-1 text-gray-700 text-sm font-semibold text-center label">
               Navbar
             </label>
             <input
@@ -238,13 +240,13 @@ const handleScrollToTop = () => {
               onChange={(e) =>
                 setColors((prev) => ({ ...prev, color1: e.target.value }))
               }
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc]"
+              className="p-2 border text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc]"
             />
           </div>
 
                                       {/* Body Color */}
           <div className="flex flex-col">
-            <label className="mb-1 text-gray-700 font-semibold text-center label">
+            <label className="mb-1 text-gray-700 text-sm font-semibold text-center label">
               Body
             </label>
             <input
@@ -254,13 +256,13 @@ const handleScrollToTop = () => {
               onChange={(e) =>
                 setColors((prev) => ({ ...prev, color2: e.target.value }))
               }
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc]"
+              className="p-2 border text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc]"
             />
           </div>
 
                                        {/* Content Color */}
           <div className="flex flex-col">
-            <label className="mb-1 text-gray-700 font-semibold text-center label">
+            <label className="mb-1 text-gray-700 text-sm font-semibold text-center label">
               Content
             </label>
             <input
@@ -270,16 +272,16 @@ const handleScrollToTop = () => {
               onChange={(e) =>
                 setColors((prev) => ({ ...prev, color3: e.target.value }))
               }
-              className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc] "
+              className="p-2 border text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-[#eadbcc] "
             />
           </div>
 
                                 {/* Add Palette & Delete All Buttons Row */}
-          <div className="flex flex-col md:flex-row col-span-1 md:col-span-2 lg:col-span-3 gap-4">
+          <div className="flex justify-center-safe flex-col md:flex-row col-span-1 md:col-span-2 lg:col-span-3 gap-3 md:gap-4 mt-2">
                                     {/* Add Palette Button */}
             <button
               onClick={paletteSetter}
-              className="bg-[#A98467] add-btn text-white border font-semibold p-3 rounded-md hover:bg-[#9a775d] transition cursor-pointer w-full"
+              className="bg-[#A98467] add-btn text-sm text-white border font-semibold px-5 py-3 w-full rounded-md hover:bg-[#9a775d] transition cursor-pointer "
             >
               + Add Palette
             </button>
@@ -287,7 +289,7 @@ const handleScrollToTop = () => {
                                    {/* Delete All Button */}
             <button
               onClick={() => deleteAllHandler()}
-              className="bg-[#de5252] text-[#fff] border font-semibold p-3 rounded-md hover:bg-[#d72b2b] transition cursor-pointer w-full"
+              className="bg-[#de5252] text-[#fff] text-sm border font-semibold p-3 px-5 py-3 w-full rounded-md hover:bg-[#d72b2b] transition cursor-pointer "
             >
               🗑️ Delete All
             </button>
