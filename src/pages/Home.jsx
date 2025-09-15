@@ -18,7 +18,7 @@ function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   const [defaultCard, setDefaultPalette] = useState({
-      color_1: '',
+      color_1:'',
       color_2:'',
       color_3:'',
   });
@@ -155,14 +155,26 @@ const handleScrollToTop = () => {
     <div
       className={`myhome min-h-screen p-6 ${isDarkTheme ? "dark-theme" : ""}  `}
     >
+      <AnimatePresence>
       {showDelete && (
-        <div className="fixed inset-0 flex justify-center items-center text-center z-50 h-full w-full bg-black/50 backdrop-blur-xs animate-fadeInScale ">
-          <div className="w-full confirmation-box max-w-md sm:w-[25%] bg-[#FCF9F4] rounded-2xl shadow-2xl border border-[#E5E1DA] p-6 space-y-6 text-gray-800">
-            <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
+        <motion.div className="fixed inset-0 flex justify-center items-center text-center z-50 h-full w-full bg-black/50 backdrop-blur-xs "
+          initial = {{ opacity: 0}}
+          animate = {{ opacity: 1}}
+          exit={{ opacity: 0}}
+          transition={{ duration: 0.25}}
+          >
+          <motion.div className="w-[75%] overflow-hidden flex justify-center  flex-col confirmation-box max-w-md  md:w-[27%] bg-[#FCF9F4] rounded-2xl shadow-2xl border border-[#E5E1DA] px-4 py-5 space-y-3 md:space-y-6 text-gray-800"
+              initial = {{ scale: 0.8 , opacity: 0 , y:20}}
+              animate = {{ scale: 1, opacity: 1, y: 0}}
+              exit={{ scale: 0.8 , opacity:0, y:20}}
+              transition={{ duration: 0.25, ease: "easeInOut"}}
+
+          >
+            <div className="space-y-3">
+              <h1 className="text-xl font-semibold tracking-tight">
                 Are you sure?
               </h1>
-              <p className="text-base  leading-relaxed opacity-85">
+              <p className="md:text-base text-sm leading-relaxed opacity-85">
                 This will permanently delete the palette card(s). This action
                 cannot be undone.
               </p>
@@ -170,20 +182,21 @@ const handleScrollToTop = () => {
             <div className="flex justify-between items-center gap-4">
               <button
                 onClick={() => setShowDelete(false)}
-                className="flex-1 p-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 hover:scale-105 transition-all duration-200 ease-in-out"
-              >
+                className="flex-1 px-2 py-2.5 text-sm bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 hover:scale-103 transition-all duration-200 ease-in-out"
+                >
                 Cancel
               </button>
               <button
                 onClick={() => handleDelete(deleteID)}
-                className="flex-1 p-3 bg-red-500 text-white rounded-lg hover:bg-red-600 hover:scale-105 transition-all duration-200 ease-in-out"
-              >
+                className="flex-1 px-2 py-2.5 text-sm bg-red-500 text-white rounded-lg hover:bg-red-600 hover:scale-103 transition-all duration-200 ease-in-out"
+                >
                 Delete
               </button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
       <Theme_btn onClick={handleTheme} isDarkTheme={isDarkTheme} />
       <div className="footer-icons fixed bottom-2 right-1.5 z-80 flex 
       justify-center items-center gap-3 flex-col">
