@@ -85,12 +85,6 @@
 
 * {
   transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease , hover 0.5 ease-in-out;
+    
 }
-
-  @media (max-width:425px) {
-        .home-link{
-            top: 1.630rem;
-            left: 2rem;
-        }
-  }

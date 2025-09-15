@@ -81,26 +81,29 @@ const Experience = () => {
    <div className={`experience min-h-screen flex flex-col ${isDarkTheme?'dark-theme':''}`} style={{ backgroundColor }}>
    
       {/* Navbar */}
-      <div className=""
-       style={{
-              backgroundColor: navbarColor,   
-            }}
-           >
-        <span className="absolute home-link text-white top-9.5 font-semibold left-14 hover:scale-[1.05] hover:font-bold hover:underline">
-          <Link to="/">Home</Link>
-        </span>
-        <div>
-          <nav
-            className="w-full h-24 shadow-md flex items-center justify-center text-xl font-semibold "
-          >
-            <span style={{
-              cursor: 'url("./feather-30.png") 10 100 , auto',
-              color: navbarClicked ? "black" : "white"}}   onClick={() => setNavbarClicked(!navbarClicked)}>
-               Navbar
-              </span>
-          </nav>
-        </div>
-      </div>
+     <div
+  className="w-full h-20 flex items-center justify-between px-14 shadow-md"
+  style={{ backgroundColor: navbarColor }}
+>
+  {/* Left-aligned Home link */}
+  <span className="text-base text-white font-semibold hover:scale-[1.05] hover:font-bold hover:underline">
+    <Link to="/">Home</Link>
+  </span>
+
+  {/* Centered Navbar text */}
+  <nav className="flex-1 flex items-center justify-center text-md font-semibold ">
+    <span
+      style={{
+        cursor: 'url("./feather-30.png") 10 100 , auto',
+        color: navbarClicked ? "black" : "white",
+      }}
+      onClick={() => setNavbarClicked(!navbarClicked)}
+    >
+      Navbar
+    </span>
+  </nav>
+</div>
+
 
       {/* Color Picker Panel */}
 
@@ -199,29 +202,36 @@ const Experience = () => {
           
         >
           {[1, 2, 3, 4].map((_, i) => (
-            <div
-              key={i}
-              className="w-[80%] h-60 bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-150 m-auto"
-            >
-              <div className="h-1/3 bg-black/20 flex items-center justify-center text-lg font-semibold text-white"
-               style={{ backgroundColor:backgroundColor,
-              cursor: 'url("./feather-30.png") 10 100 , auto',
-              color: bodyClicked ? "black" : "white",
-            }}
-              onClick={() => setBodyClicked(!bodyClicked)}
-              >
-                Section {i + 1}
-              </div>
-              <div className={`h-2/3 card-content p-4 flex items-center justify-center text-center`}
-                 style={{
-              cursor: 'url("./feather-30.png") 10 100 , auto',
-              color: contentClicked ? "white" : "black",
-            }}
-                 onClick={() => setcontentClicked(!contentClicked)}>
-                Content goes here
-              </div>
-            </div>
-          ))}
+  <div
+    key={i}
+    className="w-[95%] h-60 bg-white rounded-2xl shadow-lg overflow-hidden 
+               hover:scale-105 hover:shadow-2xl 
+               transition-transform duration-500 ease-in-out m-auto"
+  >
+    <div
+      className="h-[28%] bg-black/20 flex items-center justify-center text-base font-semibold text-white"
+      style={{
+        backgroundColor: backgroundColor,
+        cursor: 'url("./feather-30.png") 10 100, auto',
+        color: bodyClicked ? "black" : "white",
+      }}
+      onClick={() => setBodyClicked(!bodyClicked)}
+    >
+      Section {i + 1}
+    </div>
+    <div
+      className="h-2/3 card-content text-sm p-4 flex items-center justify-center text-center"
+      style={{
+        cursor: 'url("./feather-30.png") 10 100, auto',
+        color: contentClicked ? "white" : "black",
+      }}
+      onClick={() => setcontentClicked(!contentClicked)}
+    >
+      Content goes here
+    </div>
+  </div>
+))}
+
         </div>
       </div>
 
@@ -230,7 +240,7 @@ const Experience = () => {
       <div className="fixed bottom-5 right-5 z-40">
         <button
           onClick={() => setShowColorPicker(true)}
-          className="bg-[#e0ddd7] text-[#1f1f1f] px-4 py-3 rounded-lg shadow-lg hover:bg-[#c8c5bf] custm-btn transition"
+          className="bg-[#e0ddd7] cursor-grab text-[#1f1f1f] px-3 py-3 text-base rounded-lg shadow-lg hover:bg-[#f1eee9] custm-btn transition"
         >
           Customize Colors
         </button>
