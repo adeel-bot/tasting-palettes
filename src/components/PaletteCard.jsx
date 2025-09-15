@@ -41,13 +41,13 @@ const PaletteCard = ({
       transition={{ duration: 0.3 }}
     >
       <div
-        className="h-20 flex items-center justify-between text-center
-         font-bold text-white text-lg pl-5 pr-5 "
+        className="h-15 flex items-center justify-between text-center
+         font-bold text-white text-base pl-5 pr-5 "
         style={{
           backgroundColor: palettes.color1,
         }}
       >
-        <span className="relative inline-block h-[30px] w-[30px]">
+        <span className="relative inline-block h-[24px] w-[24px]">
           <img
             src="./icons8-static.png"
             alt="close_static"
@@ -79,8 +79,8 @@ const PaletteCard = ({
           >
             <img
               className="cursor-pointer transition-transform hover:scale-[1.20]"
-              width="29px"
-              height="29px"
+              width="23px"
+              height="23px"
               src="./external-link.png"
               alt="Experience_link"
             />
@@ -88,7 +88,7 @@ const PaletteCard = ({
         </span>
       </div>
       <div
-        className="h-32 flex pt-4.5 justify-center text-white font-medium text-md"
+        className="h-25 flex pt-4.5 justify-center text-white font-medium text-[15px]"
         style={{
           backgroundColor: palettes.color2,
           cursor: 'url("./feather-30.png") 10 100 , auto',
@@ -99,7 +99,7 @@ const PaletteCard = ({
         Body
       </div>
       <div
-        className="h-28 truncate w-[80%] bg-[#FDF8F1] m-auto flex items-center justify-center font-medium rounded-2xl relative bottom-11"
+        className="h-25 truncate w-[80%] bg-[#FDF8F1] m-auto text-sm flex items-center justify-center font-medium rounded-2xl relative bottom-11"
         style={{
           backgroundColor: palettes.color3,
           cursor: 'url("./feather-30.png") 10 100 , auto',

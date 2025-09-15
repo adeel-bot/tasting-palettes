@@ -198,15 +198,15 @@ const handleScrollToTop = () => {
       )}
       </AnimatePresence>
       <Theme_btn onClick={handleTheme} isDarkTheme={isDarkTheme} />
+      
       <div className="footer-icons fixed bottom-2 right-1.5 z-80 flex 
       justify-center items-center gap-3 flex-col">
-
       <div className="to-top pb-1">
         <button onClick={handleScrollToTop}>
           <img width="45px" height="45px" src="./back-to-top.png" alt="back_to_top" />
           </button>
       </div>
-           <div >
+      <div >
         <a  href="https://www.instagram.com/adeel_bot/" target="_blank" rel="noopener noreferrer">
         <img width='25px' height='25px' src="./instagram-2016-5.svg" alt="Insta_Link" />
         </a>
@@ -304,14 +304,15 @@ const handleScrollToTop = () => {
 
                                 {/* Default Card + Palette Cards */}
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[80px]">
+      <div className="max-w-[58rem] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 
+      gap-6 mt-[65px]">
                                  {/* Default Sample Card */}
         <div
           className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-300 transition-transform hover:scale-[1.02] text-center"
           style={{ backgroundColor: defaultCard.color_2 }}
         >
           <div
-            className=" h-20 flex items-center text-center justify-center font-bold text-white text-lg pl-5 pr-5"
+            className=" h-15 flex items-center text-center justify-center font-bold text-white text-base pl-5 pr-5"
             style={{
               backgroundColor: defaultCard.color_1
             }}
@@ -328,7 +329,7 @@ const handleScrollToTop = () => {
             </span>
           </div>
           <div
-            className="h-32 flex pt-4.5 justify-center text-white font-medium text-md "
+            className="h-25 flex pt-4.5 justify-center text-white font-medium text-[15px] "
             style={{
               backgroundColor: defaultCard.color_2,
               cursor: 'url("./feather-30.png") 10 100 , auto',
@@ -339,7 +340,7 @@ const handleScrollToTop = () => {
             <span>Body</span>
           </div>
           <div
-            className="h-28 w-[80%] p-3 text-center m-auto flex items-center justify-center font-medium rounded-2xl relative bottom-11"
+            className="h-25 w-[80%] p-3 text-sm text-center m-auto flex items-center justify-center font-medium rounded-2xl relative bottom-11"
             style={{
              cursor: 'url("./feather-30.png") 10 100 , auto',
               color: contentClicked ? "white" : "black",
